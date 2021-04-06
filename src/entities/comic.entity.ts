@@ -6,10 +6,10 @@ export class Comic {
   @PrimaryGeneratedColumn({ type: 'bigint' })
   id: Number
 
-  @Column('character varying')
+  @Column('character varying', { nullable: true })
   title: String
 
-  @Column('text')
+  @Column('text', { nullable: true })
   description: String
 
   @Column('varchar', { name: 'image_url', length: 300, nullable: true })
